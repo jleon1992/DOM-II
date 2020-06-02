@@ -17,6 +17,10 @@ let nav = document.querySelectorAll(".nav a").forEach(item => {
 // Destination
 let choose = document.querySelector('.content-destination h2');
 let destinations = document.querySelector('.off.destination');
+// Selects Container
+let container = document.querySelector('.container.home');
+// Fun Bus
+let logo = document.querySelector('.logo-heading');
 
 // Opens a list of choices 2
 choose.addEventListener('click', function(event){
@@ -38,8 +42,16 @@ document.addEventListener('wheel', function(event){
     event.target.style.backgroundColor = "white";
 }});
 
-// Resize
+// Resize max-width == 100% 5
+window.addEventListener('resize', function(event){
+    container.style.maxWidth = '100%';
+})
 
+// Double-Click
+logo.addEventListener('dblclick', function(event){
+    console.log('clicked');
+    logo.style.color = "red";
+})
 
 // List functions
 function openList(event){
