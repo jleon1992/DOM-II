@@ -12,7 +12,8 @@ let container = document.querySelector('.container.home');
 let logo = document.querySelector('.logo-heading');
 // img
 let image = document.querySelector('img');
-
+// paragraphs
+let paragraph = document.querySelector('p');
 
 // Hover event for nav items 1
 let nav = document.querySelectorAll(".nav a").forEach(item => {
@@ -70,9 +71,15 @@ logo.addEventListener('contextmenu', function(e){
     alert('dont copy')
 });
 
-// Mouse leave
+// Mouse leave remove image 9
 image.addEventListener('mouseleave', function(e){
     image.style.display = "none";
+})
+
+// Select paragraph
+paragraph.addEventListener('copy', function(e){
+    paragraph.style.color = "yellow";
+    console.log('copy');
 })
 
 // List functions
