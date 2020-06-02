@@ -1,17 +1,6 @@
 // Your code goes here
 
-// Hover event for nav items 1
-let nav = document.querySelectorAll(".nav a").forEach(item => {
-    item.addEventListener("mouseenter", function(event){
-        event.target.style.fontSize = "2rem";
-        event.target.style.color = "pink";
 
-
-    setTimeout(function(){
-        event.target.style.fontSize = "";
-    }, 500)
-    } )
-})
 
 
 // Destination
@@ -21,6 +10,23 @@ let destinations = document.querySelector('.off.destination');
 let container = document.querySelector('.container.home');
 // Fun Bus
 let logo = document.querySelector('.logo-heading');
+// img
+let image = document.querySelector('img');
+
+
+// Hover event for nav items 1
+let nav = document.querySelectorAll(".nav a").forEach(item => {
+    item.addEventListener("mouseenter", function(event){
+        event.target.style.fontSize = "2rem";
+        event.target.style.color = "pink";
+
+        event.target.preventDefault();
+
+    setTimeout(function(){
+        event.target.style.fontSize = "";
+    }, 500)
+    } )
+})
 
 // Opens a list of choices 2
 choose.addEventListener('click', function(event){
@@ -47,10 +53,26 @@ window.addEventListener('resize', function(event){
     container.style.maxWidth = '100%';
 })
 
-// Double-Click
+// Double-Click 6
 logo.addEventListener('dblclick', function(event){
     console.log('clicked');
     logo.style.color = "red";
+})
+
+// Load listener 7
+window.addEventListener('load', function(e){
+    image.style.border = "20px dashed grey";
+});
+
+
+// right click 8
+logo.addEventListener('contextmenu', function(e){
+    alert('dont copy')
+});
+
+// Mouse leave
+image.addEventListener('mouseleave', function(e){
+    image.style.display = "none";
 })
 
 // List functions
